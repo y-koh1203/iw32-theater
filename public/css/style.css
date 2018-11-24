@@ -1,0 +1,462 @@
+body{
+  font-family: "游ゴシック Medium","Yu Gothic Medium","游ゴシック体",YuGothic,sans-serif;
+  background-color: #edf1f2;
+}
+a{
+  text-decoration: none;
+  color: #000;
+  cursor:pointer;
+}
+
+.top{
+  width: 87%;
+  margin: auto;
+}
+.swiper-container{
+  width: 100%;
+  margin: auto;
+}
+.swiper-slide{
+  text-align: center;
+}
+.swiper-slide img{
+  width: 85%;
+  height: 500px;
+  object-fit: cover;
+}
+
+header{
+  width: 100%;
+  background-color: #004c7e;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 50px;
+}
+/*ロゴ*/
+.logo h1{
+}
+.logo h1 img{
+  width: 60%;
+  object-fit: contain;
+}
+/*ログインと新規登録*/
+.login-member{
+  clear: both;
+  vertical-align: top;
+}
+.login{
+  border-radius: 0 0 10px 10px;
+  height: 30px;
+  margin-right: 30px;
+  vertical-align: top;
+  display: table;
+  text-align: center;
+  width:130px;
+  background-color: #003253;
+  float: left;
+}
+.login a{
+  display: table-cell;
+  color: #fff;
+  text-decoration: none;
+}
+.login img{
+  display: table-cell;
+  margin-left: 30%;
+  width: 20px;
+}
+.newmember{
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  height: 30px;
+  margin-right: 30px;
+  float: left;
+  vertical-align: top;
+  display: table;
+  width: 130px;
+  background-color: #735f24;
+}
+.newmember a{
+  display: table-cell;
+  color: #fff;
+  text-decoration: none;
+}
+.newmember img{
+  margin-top: 10%;
+  margin-left: 30%;
+  display: table-cell;
+  width: 20px;
+}
+
+/*メニュー*/
+.color{
+  color: #0077c6 !important;
+  font-family: 'Garamond','Garamond','Garamond',Garamond,sans-serif;
+}
+
+nav{
+  padding-top: 20px;
+  padding-bottom: 2%;
+}
+nav ul{
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li{
+  text-align: center;
+}
+.menu a{
+  text-align: center;
+  color: #272727 !important;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+
+.menu {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.menu:before, .menu:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #004c7e;
+}
+
+.menu:before {
+  left: -2.5px;
+}
+.menu:after {
+  right: 2.5px;
+  background: #004c7e;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.menu:hover:before {
+  background: #004c7e;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.menu:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+/*日付*/
+.movie{
+  color:#272727;
+	background-color: #edf1f2;
+  padding-bottom: 5%;
+}
+.bold{
+  font-style: bold;
+  font-size: 20px;
+}
+.movie-day .red{
+	color: #dc143c;
+	padding-top:5px;
+	font-size:13px;
+}
+.movie-day{
+  background-color: #004c7e;
+  height: 100px;
+}
+.day-box{
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.day-box p{
+	text-align: center;
+  background-color: #fff;
+	width:12%;
+	margin: 10px;
+	border-radius: 5px;
+	height:60px;
+	padding-top: 20px;
+}
+
+/*予約概要*/
+.cancel{
+  color:#272727;
+	border: dashed 1px;
+	background-color: #fff;
+	display:flex;
+	width: 87%;
+	margin:auto;
+	line-height: 25px;
+	padding: 2%;
+	margin-top:3%;
+	font-size:14px;
+}
+.cancel .red{
+	color: #dc143c;
+	font-size:22px;
+	text-decoration: underline;
+}
+.cancel h2{
+	font-size:22px;
+}
+
+.cancel p{
+
+}
+.about-cancel{
+	width:50%;
+	padding-right: 2%;
+}
+.cancel-tel{
+	background-color: #004c7e;
+	color: #fff;
+	padding: 3%;
+	text-align: center;
+	font-size:22px;
+}
+.about-price{
+	width:50%;
+	padding-right: 2%;
+}
+.about-price .sub-text{
+	font-size:12px;
+}
+
+/*席について*/
+.about-sheet{
+	width:87%;
+	margin: auto;
+	display: flex;
+	padding-top: 2%;
+}
+.sheet-left img{
+	width:60%;
+}
+.sheet-right{
+	padding-right: 5%;
+	padding-top: 0.5%;
+}
+
+/*映画*/
+.movie-info{
+  margin-top: 3%;
+  width:87%;
+  margin: auto;
+  background-color: #707070;
+  display: flex;
+  padding: 2%;
+}
+.movie-left{
+  width:15%;
+  padding-right: 2%;
+}
+.movie-left img{
+  width:100%;
+}
+.movie-right{
+  width:85%;
+}
+.movie-right h2{
+  width: 100%;
+  font-size:22px;
+  padding-bottom: 5px;
+  color:#fff;
+  border-bottom: 1px solid #fff;
+}
+.movie-right a{
+  color:#fff;
+}
+.movie-right-text{
+  margin: 2%;
+  display: flex;
+}
+.movie-box{
+  color:#272727;
+  margin-right: 2%;
+  background-color: #edf1f2;
+  width:20%;
+  padding: 2%;
+}
+.movie-box p{
+  padding-bottom: 5px;
+  border-bottom: 1px solid #272727;
+}
+.movie-time p{
+  border-bottom: 0px;
+  padding-left: 5%;
+}
+.movie-time a{
+  color:#272727;
+}
+.details{
+  padding-top: 10%;
+  display: flex;
+}
+.sheet-status{
+  width: 30%;
+  padding-right: 5%;
+}
+.sheet-status img{
+  width:100%;
+}
+
+/*お知らせ*/
+.news{
+  width: 87%;
+  margin: auto;
+  text-align: center;
+  background-color: #edf1f2;
+  margin-bottom: 5%;
+}
+.news-details{
+  display: flex;
+  margin-bottom: 5%;
+}
+.news h2{
+  font-size:22px;
+}
+.news-top{
+  margin-top: 3%;
+  width:55%;
+}
+.news-top .news-text h3{
+  margin-bottom: 2%;
+}
+.news-top-img{
+
+}
+.news-top-img img{
+  border: solid 3px #fff;
+  width: 100%;
+  object-fit: cover;
+}
+.topics-img img{
+  position: absolute;
+  width: 8%;
+  top:1344px;
+  left:160px;
+}
+.news-text{
+  text-align: left;
+  line-height: 20px;
+}
+.news-text p{
+  font-size:12px;
+  color: #383838;
+}
+.news-jenre{
+  margin-left: 2%;
+  background-color: #c68700;
+  color: #fff;
+  border-radius: 3px;
+  padding: 0.5% 5% 0.5% 5%;
+}
+.news-text h3 a{
+  margin: 2% 0 2% 0;
+  font-size: 22px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #272727;
+}
+.news-sub{
+  margin-top: 3%;
+  margin-left: 3%;
+  width: 40%;
+}
+.news-box{
+  width: 100%;
+  display: flex;
+  margin-bottom: 8%;
+}
+.news-img{
+  width:40%;
+}
+.news-img img{
+  border: solid 3px #fff;
+  width:100%;
+}
+.news-sub-text{
+  text-align: left;
+  width:55%;
+  margin-left: 5%;
+}
+.news-sub-text p{
+  font-size:12px;
+  color: #383838;
+}
+.news-sub-text h3{
+  margin: 2% 0 2% 0;
+  font-size: 16px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #272727;
+}
+.new-news{
+  margin: 5%;
+  color: #0078c6 !important;
+  padding: 2% 5% 2% 5%;
+  border: solid 1px #0078c6;
+  -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.new-news:hover{
+  background-color: #0078c6;
+  color: #fff !important;
+}
+
+/*フッター*/
+.footer{
+  padding: 3%;
+  background-color: #004c7e;
+  color:#fff;
+  display: flex;
+}
+.footer-logo{
+  width: 25%;
+}
+.company{
+  width: 25%;
+  margin-left: 5%;
+}
+.cancel-button{
+  margin: 10%;
+  color: #fff !important;
+  padding: 4% 20% 4% 20%;
+  border: solid 1px #fff;
+  -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.cancel-button:hover{
+  background-color: #fff;
+  color: #004c7e !important;
+}
+.info{
+  line-height:70px;
+  width: 45%;
+  margin-left: 5%;
+}
+.info p a{
+  color: #fff;
+  font-size: 14px;
+}
+.info-button{
+  margin: 10%;
+  color: #fff !important;
+  padding: 4% 22% 4% 22%;
+  background-color: #bcab77;
+  -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.info-button:hover{
+  background-color: #735f24;
+  color: #fff !important;
+}
+.site-map{
+  font-size: 8px;
+  margin-top: 5%;
+}
