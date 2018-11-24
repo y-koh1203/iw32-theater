@@ -33,3 +33,5 @@ Route::get('/admin/schedule', 'AdminScheduleController@index');
 //バイト、社員
 Route::get('/staff', 'StaffController@index');
 Route::get('/staff/schedule', 'StaffScheduleController@index');
+Route::get('/home', 'HomeController@index');
+Route::get('/home/Employee', 'AdminEmployeeController@index');
