@@ -5,7 +5,7 @@ html {
     box-sizing: inherit;
 }
 body{
-  background-color: grey;
+  background-color: #ddd;
 }
 header{
   height: 17vh;
