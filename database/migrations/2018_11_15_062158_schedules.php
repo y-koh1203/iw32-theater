@@ -13,7 +13,17 @@ class Schedules extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('schedules', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+            $table->integer('movie_no');
+            $table->integer('screen_no');
+            $table->dateTime('screening_date');
+            $table->time('screening_time');
+            $table->tinyInteger('screening_status');
+            $table->date('registed_at');
+            $table->date('updated_at');
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ class Schedules extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('schedules');
     }
 }

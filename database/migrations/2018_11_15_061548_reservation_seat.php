@@ -13,7 +13,12 @@ class ReservationSeat extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('reservation_seat', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+            $table->string('reservation_seat_name');
+            $table->integer('screen_no');
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class ReservationSeat extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('reservation_seat');
     }
 }

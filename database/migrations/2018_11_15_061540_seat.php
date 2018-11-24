@@ -13,7 +13,11 @@ class Seat extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('seats', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+            $table->string('seat_name');
+        });
     }
 
     /**
@@ -23,6 +27,6 @@ class Seat extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('seats');
     }
 }

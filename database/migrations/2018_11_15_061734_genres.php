@@ -13,7 +13,11 @@ class Genres extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('genres', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+            $table->string('genre_name');
+        });
     }
 
     /**
@@ -23,6 +27,6 @@ class Genres extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('genres');
     }
 }

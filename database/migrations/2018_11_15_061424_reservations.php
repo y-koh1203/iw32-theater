@@ -13,7 +13,19 @@ class Reservations extends Migration
      */
     public function up()
     {
-        //
+        //task 外部参照
+        Schema::create('reservations', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+            $table->integer('schedule_no');
+            $table->integer('seat_no');
+            $table->integer('member_no');
+            $table->tinyInteger('ticket_status');
+            $table->integer('type_no');
+            $table->date('reservation_date');
+            $table->date('ticket_date');
+            $table->date('cancel_date');
+        });
     }
 
     /**
@@ -23,6 +35,6 @@ class Reservations extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('reservations');
     }
 }

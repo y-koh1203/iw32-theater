@@ -13,7 +13,15 @@ class Staff extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('staff', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('staff_name');
+            $table->tinyInteger('gender');
+            $table->string('password');
+            $table->tinyInteger('authority');
+            $table->date('birthday');
+            $table->date('retirement_date');
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ class Staff extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('staff');
     }
 }

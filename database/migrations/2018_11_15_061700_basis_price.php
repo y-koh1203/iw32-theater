@@ -13,7 +13,11 @@ class BasisPrice extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('basis_price', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+            $table->integer('basis_price');
+        });
     }
 
     /**
@@ -23,6 +27,6 @@ class BasisPrice extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('basis_price');
     }
 }

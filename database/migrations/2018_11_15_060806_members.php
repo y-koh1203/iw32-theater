@@ -15,8 +15,9 @@ class Members extends Migration
     {
         //
         Schema::create('members', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('name');
+            $table->string('member_name');
             $table->tinyInteger('gender');
             $table->date('birthday');
             $table->string('email')->unique();
@@ -26,7 +27,7 @@ class Members extends Migration
             $table->date('limit');
             $table->date('subscribed_at');
             $table->date('unsubscribed_at');
-            $table->tinyInteger('status');
+            $table->tinyInteger('member_status');
             $table->timestamps();
         });
     }

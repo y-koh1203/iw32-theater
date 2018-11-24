@@ -13,7 +13,12 @@ class Sales extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('sales', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+            $table->integer('reservation_no');
+            $table->date('sales_date');
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class Sales extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('sales');
     }
 }

@@ -14,8 +14,9 @@ class Screens extends Migration
     public function up()
     {
         Schema::create('screens', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('name');
+            $table->string('screen_name');
         });
     }
 

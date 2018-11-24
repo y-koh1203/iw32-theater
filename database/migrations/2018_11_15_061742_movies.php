@@ -13,7 +13,18 @@ class Movies extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('movies', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+            $table->string('movie_name');
+            $table->date('showing_open');
+            $table->date('showing_close');
+            $table->integer('genre_no');
+            $table->text('description');
+            $table->date('registed_date');
+            $table->date('updated_date');
+            $table->tinyInteger('movie_status');
+        });
     }
 
     /**
@@ -23,6 +34,6 @@ class Movies extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('movies');
     }
 }
