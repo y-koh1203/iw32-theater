@@ -31,7 +31,7 @@
 
   <nav class="container">
     <ul>
-      <li class="menu"><a href="">上映中作品<br><span class="color">Showing</span></a></li>
+      <li class="menu"><a href="/customer/schedule">上映中作品<br><span class="color">Showing</span></a></li>
       <li>│</li>
       <li class="menu"><a href="">上映予定作品<br><span class="color">Schedule</span></a></li>
       <li>│</li>
