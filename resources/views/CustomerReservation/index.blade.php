@@ -4,7 +4,7 @@
 @endsection
 @section('content')
 <h1>{{ $a }}</h1>
-<p>スケジュールNo {{ $id }}</p>
+<p>スケジュールNo {{ $ScheduleId }}</p>
 <form action="{{ url('/customer/reservation/confirm') }}" method="POST">
   {{ csrf_field() }}
 <table>
