@@ -2,6 +2,6 @@
 @section('content')
   {{ $a }}
   @foreach($movies as $value)
-    <p>{{ $value }}</p>
+    <a href="/customer/reservation/{{$value}}">{{ $value }}</a>
   @endforeach
 @endsection

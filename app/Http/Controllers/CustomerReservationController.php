@@ -8,10 +8,11 @@ class CustomerReservationController extends Controller
 {
   /*
    *予約座席
+   *$idはスケジュール
    */
-  public function index(){
+  public function index(Request $request, $ScheduleId){
     $a = "お客予約";
-    return view('CustomerReservation.index', compact('a'));
+    return view('CustomerReservation.index', compact('a','ScheduleId'));
   }
   /*
    *予約確認

@@ -17,7 +17,7 @@ Route::get('/customer/top', 'CustomerController@index');
 //現在上映映画
 Route::get('/customer/schedule', 'CustomerScheduleController@index');
 //座席予約
-Route::get('/customer/reservation', 'CustomerReservationController@index');
+Route::get('/customer/reservation/{ScheduleId}', 'CustomerReservationController@index');
 Route::post('/customer/reservation/confirm', 'CustomerReservationController@confirm');
 
 //Route::get('/customer/mypage', 'CustomerMypageController@index');
