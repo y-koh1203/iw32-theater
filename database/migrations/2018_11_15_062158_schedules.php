@@ -19,7 +19,6 @@ class Schedules extends Migration
             $table->integer('movie_no');
             $table->integer('screen_no');
             $table->dateTime('screening_date');
-            $table->time('screening_time');
             $table->tinyInteger('screening_status');
             $table->date('registed_at');
             $table->date('updated_at');
