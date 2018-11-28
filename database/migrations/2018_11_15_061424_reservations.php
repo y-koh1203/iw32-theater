@@ -24,7 +24,7 @@ class Reservations extends Migration
             $table->integer('type_no');
             $table->date('reservation_date');
             $table->date('ticket_date');
-            $table->date('cancel_date');
+            $table->date('cancel_date')->nullable();
         });
     }
 
