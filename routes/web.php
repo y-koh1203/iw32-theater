@@ -13,12 +13,13 @@
 //お客様ログイン
 //Route::get('/customer/login', 'StaffController@index');
 //お客様トップ
-Route::get('/customer/top', 'CustomerController@index');
+Route::get('/', 'CustomerController@index');
 //現在上映映画
 Route::get('/customer/schedule', 'CustomerScheduleController@index');
 //座席予約
-Route::get('/customer/reservation', 'CustomerReservationController@index');
+Route::get('/customer/reservation/{id}', 'CustomerReservationController@index');
 Route::post('/customer/reservation/confirm', 'CustomerReservationController@confirm');
+Route::post('/customer/reservation/complete', 'CustomerReservationController@insertSchedule');
 
 //Route::get('/customer/mypage', 'CustomerMypageController@index');
 

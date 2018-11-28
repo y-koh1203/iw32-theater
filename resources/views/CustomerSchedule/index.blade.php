@@ -1,7 +1,9 @@
 @extends('layouts.app')
 @section('content')
-  {{ $a }}
-  @foreach($movies as $value)
-    <p>{{ $value }}</p>
+  @foreach($schedules as $v)
+    <div>
+      <a href="/customer/reservation/{{$v['id']}}">{{ $v['movie_name']}}</a>：{{$v['screening_date']}}~
+    </div>
+    <hr>
   @endforeach
 @endsection

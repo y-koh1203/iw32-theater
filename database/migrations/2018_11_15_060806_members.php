@@ -22,7 +22,7 @@ class Members extends Migration
             $table->date('birthday');
             $table->string('email')->unique();
             $table->string('card_name');
-            $table->integer('card_no')->unique();
+            $table->string('card_no')->unique();
             $table->integer('security_code');
             $table->date('limit');
             $table->date('subscribed_at');

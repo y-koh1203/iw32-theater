@@ -107,15 +107,15 @@
       		<p>シアター3</p>
           <div class="details">
             <div class="sheet-status"><img src="{{ asset('img/vacancy.png') }}"></div>
-            <div class="movie-time"><a href=""><span class="bold">12:00</span><br>~14:00</a></div>
+            <div class="movie-time"><a href="/customer/schedule/1"><span class="bold">12:00</span><br>~14:00</a></div>
           </div>
       	</div>
 
         <div class="movie-box">
       		<p>シアター3</p>
           <div class="details">
-            <div class="sheet-status"><img="../img/"></div>
-            <div class="movie-time"><a href=""><span class="bold">12:00</span><br>~14:00</a></div>
+            <div class="sheet-status"></div>
+            <div class="movie-time"><a href="/customer/schedule/2"><span class="bold">12:00</span><br>~14:00</a></div>
           </div>
       	</div>
 

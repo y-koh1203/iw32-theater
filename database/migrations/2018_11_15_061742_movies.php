@@ -22,8 +22,8 @@ class Movies extends Migration
             $table->integer('genre_no');
             $table->text('description');
             $table->time('screening_time');
-            $table->date('registed_date');
-            $table->date('updated_date');
+            $table->date('registed_at');
+            $table->date('updated_at');
             $table->tinyInteger('movie_status');
         });
     }
