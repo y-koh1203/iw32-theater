@@ -9,6 +9,7 @@ class CustomerReservationController extends Controller
 {
   /*
    *予約座席
+   *$idはスケジュール
    */
   public function index(Request $r, $id){
     $r->session()->put('schedule_id',$id);
