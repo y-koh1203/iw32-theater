@@ -3,7 +3,7 @@
 <h1>{{ $a }}</h1>
 <form action="/customer/reservation/complete" method="post">
 {{ csrf_field() }}
-@foreach($ArraySeatValue as $value)
+@foreach($SeatNames as $value)
   <p>{{ $value }}</p>
 @endforeach
 <input type="hidden" name="seats" value="{{ $SeatValue }}">

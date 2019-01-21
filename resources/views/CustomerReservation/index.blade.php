@@ -6,45 +6,24 @@
 <h1></h1>
 <form action="{{ url('/customer/reservation/confirm') }}" method="POST">
   {{ csrf_field() }}
-<table>
-  <tbody>
-    <!-- rowA -->
-    <tr>
-      <td><div class="seat-box A01"></div></td>
-      <td><div class="seat-box A02"></div></td>
-    </tr>
-    <!-- rowB -->
-    <tr>
-      <td><div class="seat-box B01"></div></td>
-      <td><div class="seat-box B02"></div></td>
-    </tr>
-    <!-- rowC -->
-    <tr>
-      <td><div class="seat-box C01"></div></td>
-      <td><div class="seat-box C02"></div></td>
-    </tr>
-    <!-- rowD -->
-    <tr>
-      <td><div class="seat-box D01"></div></td>
-      <td><div class="seat-box D02"></div></td>
-    </tr>
-    <!-- rowE -->
-    <tr>
-      <td><div class="seat-box E01"></div></td>
-      <td><div class="seat-box E02"></div></td>
-    </tr>
-    <!-- rowF -->
-    <tr>
-      <td><div class="seat-box F01"></div></td>
-      <td><div class="seat-box F02"></div></td>
-    </tr>
-    <!-- rowG -->
-    <tr>
-      <td><div class="seat-box G01"></div></td>
-      <td><div class="seat-box G02"></div></td>
-    </tr>
-  </tbody>
-</table>
+<div>
+  @foreach($seats as $seat)
+    <!-- 
+      array_searchで検索した時に、配列の0番目の要素がヒットすると 
+      戻り値が0でfalseと判断せれてしまう。それを回避するためにこのifの評価式になっている。
+      気持ち悪いのでなんとかする ()
+    -->
+    @if(array_search($seat->id,$reserved) === false)
+      <div class="seat-box {{$seat->id}}">
+        {{$seat->seat_name}}
+      </div>
+    @else
+      <div class="seat-box-disable">
+        {{$seat->seat_name}}
+      </div>
+    @endif
+  @endforeach
+</div>
 <p id="text"></p>
 <input id="SeatValue" name="SeatValues" type="hidden" value="">
 <button type="submit" name="add">

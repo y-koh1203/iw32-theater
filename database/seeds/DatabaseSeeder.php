@@ -64,5 +64,18 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => '2018-12-01', 
             ]);
         }
+
+        $date = [
+            'A1','A2','A3', 'B1','B2','B3', 'C1','C2','C3',
+        ];
+
+        for($i = 1; $i <= 3; $i++){
+            for($j = 0;$j < count($date);$j++){
+                DB::table('seats')->insert([
+                    'seat_name' => $date[$j],
+                    'screen_id' => $i
+                ]);
+            }
+        }
     }
 }

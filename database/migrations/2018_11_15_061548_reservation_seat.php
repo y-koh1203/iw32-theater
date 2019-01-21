@@ -16,8 +16,8 @@ class ReservationSeat extends Migration
         Schema::create('reservation_seat', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('reservation_seat_name');
-            $table->integer('screen_no');
+            $table->integer('seat_id');
+            $table->integer('schedule_id');
         });
     }
 

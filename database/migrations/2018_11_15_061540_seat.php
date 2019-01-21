@@ -17,6 +17,7 @@ class Seat extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('seat_name');
+            $table->integer('screen_id');
         });
     }
 
