@@ -77,5 +77,17 @@ class DatabaseSeeder extends Seeder
                 ]);
             }
         }
+
+        DB::table('screens')->insert([
+            'screen_name' => 'screen1'
+        ]);
+
+        DB::table('screens')->insert([
+            'screen_name' => 'screen2'
+        ]);
+
+        DB::table('screens')->insert([
+            'screen_name' => 'screen3'
+        ]);
     }
 }

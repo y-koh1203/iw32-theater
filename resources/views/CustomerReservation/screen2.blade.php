@@ -3,7 +3,7 @@
 <link href="{{ asset('css/CustomerReservation.css') }}" rel="stylesheet">
 @endsection
 @section('content')
-<h1></h1>
+<h1>{{$screen_name}}</h1>
 <form action="{{ url('/customer/reservation/confirm') }}" method="POST">
   {{ csrf_field() }}
 <div>

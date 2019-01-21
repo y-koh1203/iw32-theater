@@ -25,13 +25,31 @@ class CustomerReservationController extends Controller
     $reserved_seats = DB::table('reservation_seat')->get()->where('schedule_id',$id);
     foreach($reserved_seats as $rs){
       $ArrayReservedSeats[] = $rs->seat_id;
-
     }
-   
-    return view('CustomerReservation.index')->with([
-      'seats' => $seats,
-      'reserved' => $ArrayReservedSeats
-    ]);
+
+    if($screen_id === 1){
+      return view('CustomerReservation.screen1')->with([
+        'seats' => $seats,
+        'reserved' => $ArrayReservedSeats,
+        'screen_name' => 'スクリーン1'
+      ]);
+    }
+
+    if($screen_id === 2){
+      return view('CustomerReservation.screen2')->with([
+        'seats' => $seats,
+        'reserved' => $ArrayReservedSeats,
+        'screen_name' => 'スクリーン2'
+      ]);
+    }
+
+    if($screen_id === 3){
+      return view('CustomerReservation.screen3')->with([
+        'seats' => $seats,
+        'reserved' => $ArrayReservedSeats,
+        'screen_name' => 'スクリーン3'
+      ]);
+    }
   }
 
   /*
